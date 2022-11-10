@@ -1,3 +1,7 @@
+icones: @fortawesome/fontawesome-free/css/all.css > colocar no css main.ts;
+        npm i --save-dev @fortawesome/fontawesome-free > instalar no terminal;
+
+
 - Após instalar os plugins, no arquivo App.vu, apagar todo conteudo da tag template e colocar a tag main;
 - criar uma classe para a main retirada do pacote bulma chamada columns is-gapless is-mutiline;
 
@@ -5,3 +9,4 @@ Componente Vue vai ser dividida em tres porções:
 - Html > usando o <template> </template>;
 - javaScript > usando o <script lang = "ts">  </script> //utilizando leng ts de typeScript;
 - css > usando o <style scoped> </style>
+-*--

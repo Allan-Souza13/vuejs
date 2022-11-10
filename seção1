@@ -1,5 +1,8 @@
 icones: @fortawesome/fontawesome-free/css/all.css > colocar no css main.ts;
         npm i --save-dev @fortawesome/fontawesome-free > instalar no terminal;
+  
+ Bulma: colocar no index.html o seguinte link para a instalação: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+ 
 
 
 - Após instalar os plugins, no arquivo App.vu, apagar todo conteudo da tag template e colocar a tag main;

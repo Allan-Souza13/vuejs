@@ -1,7 +1,10 @@
-icones: @fortawesome/fontawesome-free/css/all.css > colocar no css main.ts;
+*instalar vue no terminal: npm install -g @vue/cli
+
+*icones: import '@fortawesome/fontawesome-free/css/all.css'> colocar no css main.ts;
         npm i --save-dev @fortawesome/fontawesome-free > instalar no terminal;
   
- Bulma: colocar no index.html o seguinte link para a instalação: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+ *Bulma: colocar no index.html o seguinte link para a instalação:
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
  
 
 
@@ -13,3 +16,43 @@ Componente Vue vai ser dividida em tres porções:
 - javaScript > usando o <script lang = "ts">  </script> //utilizando leng ts de typeScript;
 - css > usando o <style scoped> </style>
 -*--
+--------------------------------------------------//---------------------------
+@click serve para reconhecer que o objeto foi clicado;
+- <button class="button" @click="finalizar">
+methods:{
+        iniciar () {
+            console.log('iniciando');
+            
+        },
+        finalizar () {
+            console.log('Finalizando');
+            
+        }
+    }
+-------------------------------------------//-----------
+
+definir um estado inicial para o componente:
+data (){
+        return {
+            tempoEmSegundos: 0
+        }
+    },
+    --------------------
+  Contando os tempo:
+  methods:{
+        iniciar () {
+            // a cadas 1 seg = 1000 ms
+            setInterval(()=>{
+              this.tempoEmSegundos +=1
+            }, 1000)
+            console.log('iniciando');            
+        },
+        finalizar () {
+            console.log('Finalizando');         
+        }
+        }
+
+
+
+
+

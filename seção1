@@ -8,7 +8,7 @@
  
 
 
-- Após instalar os plugins, no arquivo App.vu, apagar todo conteudo da tag template e colocar a tag main;
+- Após instalar os plugins, no arquivo App.vue, apagar todo conteudo da tag template e colocar a tag main;
 - criar uma classe para a main retirada do pacote bulma chamada columns is-gapless is-mutiline;
 
 Componente Vue vai ser dividida em tres porções: 
@@ -51,6 +51,47 @@ data (){
             console.log('Finalizando');         
         }
         }
+        --------------------------------
+        Para encerrar um código que está sendo executado a cada X milissegundos, passamos identificador para a função clearInterval().
+        
+        <script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
+  // código omitido
+  data() {
+    return {
+      intervalo: 0,
+    };
+  },
+  methods: {
+    iniciar(): void {
+      const minutos = 15 * 60 * 1000;
+      this.intervalo = setInterval(() => {
+        alert("Hora de fazer um intervalo!");
+      }, minutos);
+    },
+    finalizar(): void {
+      this.intervalo = null; ----> clearInterval(this.intervalo) // no lugar de this.intervalo = null, colocamos clearInterval(this.intervalo)
+    },
+  },
+  // código omitido
+});
+</script>
+
+O setInterval é perfeito para nosso cenário, de incrementar o tempo decorrido a cada segundo.
+ ---------------------------------------
+ Cria uma instância JavaScript de Date que representa um único momento no tempo. 
+ new Date();
+new Date(valor);
+new Date(dataString);
+new Date(ano, mês, dia, hora, minuto, segundo, milissegundo);
+Entre outros. Link referente ao Objeto Date: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+new Date().toLocaleTimeString() --> Esse método já retorna o horário, localizado de acordo com o idioma do navegador.
+
+---------------------------------------------------
+
+        
 
 
 
